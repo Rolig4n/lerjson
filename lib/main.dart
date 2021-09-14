@@ -1,5 +1,6 @@
+import 'package:appchat/services/chatNotificationService.dart';
 import 'package:flutter/material.dart';
-import 'package:lerjson/services/chatNotificationService.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(MyApp());
