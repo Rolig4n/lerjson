@@ -1,28 +1,27 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
-import 'package:lerjson/pages/cargosExibir.dart';
+import 'package:lerjson/services/chatNotificationService.dart';
 
 void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatefulWidget {
-  @override
-  _MyAppState createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  // This widget is the root of your application.
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Consumindo JSON',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (_) => ChatNotificationService()(),
+        ),
+      ],
+      child: MaterialApp(
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: AuthOrAppPage(),
+        debugShowCheckedModeBanner: false,
       ),
-      home: ExibirCargos(),
     );
   }
 }
