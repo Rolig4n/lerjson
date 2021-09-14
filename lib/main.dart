@@ -22,7 +22,7 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: ExibirCargos(), //aqui vai estar dando erro, falta criar
+      home: ExibirCargos(),
     );
   }
 }
