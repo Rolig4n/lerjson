@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:appchat/model/charUser.dart';
 import 'package:appchat/services/authFirebaseService.dart';
 
 abstract class AuthService {
